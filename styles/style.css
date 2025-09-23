@@ -3,6 +3,10 @@ body{
     background-image: url("https://i.pinimg.com/736x/f0/a2/15/f0a215b32c7f087eee71e7b21940b315.jpg");
     color: #4b455f;
     font-family: "Lucida Console", "Courier New", monospace;  
+    min-height: 100vh;      
+    display: flex;
+    flex-direction: column;
+    margin: 0;      
 }
 
 .header{
@@ -30,6 +34,7 @@ body{
 }
 
 main {
+    flex: 1;
     padding-top: 30px; 
     margin: 0 15% 0 15%;  
 }
@@ -67,6 +72,7 @@ h1 {    /*saludo*/
     flex-direction: column;
     align-items: center;
     gap: 10px;}
+
 
 p{
     flex:1;
@@ -109,7 +115,7 @@ aside {
 }
 
 .botones-red{display: flex;
-        flex-direction: row;}
+    flex-direction: row;}
 
 .redes img {
     width: 40px;                   
@@ -131,11 +137,11 @@ footer {
     text-align: center;
     background: none;   
     border: none; 
+    padding: 10px;
 }
 
-.footer p{
-    margin-top: 10%;
-    text-align: center;
+footer p {
+    margin: 20px 0 0 0; 
     font-size: 15px;
     font-family: "Lucida Console", "Courier New", monospace;
     background: none;   
@@ -145,3 +151,42 @@ footer {
 
 
 
+@media (max-width: 1000px) {
+
+
+    .header__menu{
+        gap: 40px;
+    }
+
+    .sobre-mi{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    p{
+        flex: none;  
+        height: auto;   
+        overflow-y: visible;
+}
+
+    aside {
+        height: auto;  
+        margin-bottom: 40px;
+        flex: unset;
+    }
+
+    .pixelart {
+    max-width: 70%;
+}
+
+
+    .botones-red {
+        margin-top: 20px;
+    }
+
+footer {
+        width: 100%;
+        margin-top: 40px;
+    }
+}
